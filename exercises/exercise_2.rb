@@ -10,5 +10,5 @@ p @store1
 
 puts "----------"
 
-@store2 = Store.find_by(name: "Gastown")
+@store2 = Store.find_by(name: "Richmond")
 p @store2
