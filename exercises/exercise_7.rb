@@ -14,5 +14,8 @@ puts "Trying to add stores that fail validation..."
 
 # Adding ! raises the error, without it -> there is an error but it won't pop
 @store7 = Store.create!(name: "Ab") 
-@store7 = Store.create!(annual_revenue: 0)
-@store7 = Store.create!(mens_apparel: false, womens_apparel: false)
+
+
+@store7.errors.each do |error|
+  puts error.message
+end
