@@ -63,3 +63,15 @@ puts "Fetching women stores that make under $1M in annual revenue..."
   puts "Annual Revenue: $#{store.annual_revenue}"
 end
 # Burnaby, Surrey, Yaletown
+
+
+
+# For exercise 6, just defining instance variables as each store
+
+puts
+puts "Just defining instance variables for each store to use in Exercise 6..."
+
+@store4 = Store.find_by(id: 4)
+@store5 = Store.find_by(id: 5)
+@store6 = Store.find_by(id: 6)
+
