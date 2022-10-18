@@ -29,17 +29,17 @@ p Store.count
 # p Store.all
 
 
-puts "Fetching stores that only carry mens apparel..."
-puts "----------"
 puts
+puts "----------"
+puts "Fetching stores that only carry mens apparel..."
 # Should be id: 1, 3, 5, 6 (but 3 was deleted)
 @mens_stores = Store.where(mens_apparel: true)
 p @mens_stores
 
 
-puts "Outputting the name & annual revenue for each mens stores..."
-puts "----------"
 puts
+puts "----------"
+puts "Outputting the name & annual revenue for each mens stores..."
 
 @mens_stores.each do |store|
   print "Name: #{store.name}, "
@@ -47,9 +47,9 @@ puts
 end
 
 
-puts "Fetching women stores that make under $1M in annual revenue..."
-puts "----------"
 puts
+puts "----------"
+puts "Fetching women stores that make under $1M in annual revenue..."
 
 # To protect against SQL injections, using ("string conditional", values-for-?)
 @womens_stores = Store.where(
